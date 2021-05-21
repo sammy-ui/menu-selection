@@ -1,0 +1,106 @@
+
+
+
+
+Select a Planet
+1.	Mercury
+2.	Venus
+3.	Earth
+4.	Mars
+5.	Exit the program
+Enter your selection.
+
+
+Module main()
+// Declare a variable to hold the
+// user's menu selection.
+Declare Integer menuSelection
+
+Do
+	//Display the menu.
+	Call displayMenu(menuSelection)
+
+   // Perform the selected operation.
+   Select menuSelection
+
+	Selection 1:
+  	   Call displayMercury()
+	Selection 2:
+  	   Call displayVenus()
+	Selection 3:
+  	   Call displayEarth()
+	Selection 4:
+   	   Call displayMars()
+	Selection 5:
+  	   Call displayExit()
+
+    End Select
+   While menuSelection != 5
+End Module
+
+ // The displayMenu module displays the menu, gets
+ // the user's selection, and validates it.
+
+
+Module displayMenu(Integer Ref selection)
+	// Display the menu.
+
+
+	Display "1. Mercury"
+	Display "2. Venus"
+	Display "3. Earth"
+	Display "4. Mars"
+	Display "5. Exit the program"
+
+// Prompt the user for a selection
+Display " Enter your selection."
+Input menuSelection
+
+// Perform the selected operation.
+Select menuSelection
+
+	// This executes if the user enters 1.
+	Display "Mercury"	
+	Display "Average distance from the sun	57.9 million kilometers"
+	Display "Mass	3.31 × 10^23kg"
+	Display "Surface temperature	–173 to 430 degrees Celsius"
+
+	// This executes if the user enters 2.
+
+	Display "Venus"	
+	Display "Average distance from the sun	108.2 million kilometers"
+	Display "Mass	4.87 × 10^24kg"
+	Display "Surface temperature	472 degrees Celsius"
+
+	// This executes if the user enters 3.
+
+	Display "Earth"
+	Display "Average distance from the sun	149.6 million kilometers"
+	Display "Mass	5.967 × 10^24kg"
+	Display "Surface temperature	–50 to 50 degrees Celsius"
+
+	// This executes if the user enters 4.
+
+	Display "Mars"
+	Display "Average distance from the sun	227.9 million kilometers"
+	Display "Mass	0.6424 × 10^24kg"
+	Display "Surface temperature	–140 to 20 degrees Celsius"
+
+	// This executes if the user enters 5.
+
+	Display "Exit the program"
+
+	Default:
+	// This executes if the user enters anything
+	//other than 1,2,3,4,or 5.
+	// Display an error message.
+	Display " That is an invalid selection"
+
+
+// Validate the selection.
+    While selection < 1 OR selection > 5
+        Display "That is an invalid selection."
+        Display "Enter 1, 2, 3, 4, or 5."
+        Input selection
+     End While
+End Module
